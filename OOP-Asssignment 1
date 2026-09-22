@@ -1,0 +1,48 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Book {
+    string bookName;
+    string writerName;
+    double bookCost;
+
+public:
+    void getDetails()
+{
+       cout << "Enter Book Name: ";
+        cin >> bookName;
+
+        cout << "Enter Writer Name: ";
+        cin >> writerName;
+
+        cout << "Enter Book Cost: ";
+        cin >> bookCost;
+    }
+
+    void displayDetails() {
+        cout << "\n--- Book Details ---" << endl;
+        cout << "Book Name: " << bookName << endl;
+        cout << "Writer Name: " << writerName << endl;
+        cout << "Book Cost: " << bookCost << endl;
+    }
+};
+
+int main() {
+    Book book1;
+
+    book1.getDetails();
+    book1.displayDetails();
+
+    return 0;
+} 
+
+Output:
+Enter Book Name: TheAlchemist
+Enter Writer Name: PauloCoelho
+Enter Book Cost: 350
+
+--- Book Details ---
+Book Name: TheAlchemist
+Writer Name: PauloCoelho
+Book Cost: 350
