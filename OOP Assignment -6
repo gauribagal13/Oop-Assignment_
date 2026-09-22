@@ -1,0 +1,46 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Employee {
+    string staffName;
+    int staffCode;
+
+public:
+    // Constructor
+    Employee(string staffName, int staffCode) {
+        this->staffName = staffName;
+        this->staffCode = staffCode;
+
+        cout << "Employee object created." << endl;
+    }
+
+    // Destructor
+    ~Employee() {
+        cout << "Employee object destroyed." << endl;
+    }
+
+    void showInfo() {
+        cout << "\n--- Employee Details ---" << endl;
+        cout << "Name: " << staffName << endl;
+        cout << "ID: " << staffCode << endl;
+    }
+};
+
+int main() {
+    Employee staff("Neha", 205);
+
+    staff.showInfo();
+
+    return 0;
+}
+
+Output:
+
+Employee object created.
+
+--- Employee Details ---
+Name: Neha
+ID: 205
+Employee object destroyed.
+
