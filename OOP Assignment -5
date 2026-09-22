@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Student {
+    string studentName;
+    int studentId;
+    string specialization;
+
+public:
+    Student(string studentName, int studentId, string specialization) {
+        this->studentName = studentName;
+        this->studentId = studentId;
+        this->specialization = specialization;
+    }
+
+    void showDetails() {
+        cout << "--- Student Details ---" << endl;
+        cout << "Name: " << studentName << endl;
+        cout << "ID: " << studentId << endl;
+        cout << "Specialization: " << specialization << endl;
+    }
+};
+
+int main() {
+    Student s("Samarth", 32, "DataScience");
+
+    s.showDetails();
+
+    return 0;
+}
+
+Output:
+
+--- Student Details ---
+Name: Samarth
+ID: 32
+Specialization: DataScience
