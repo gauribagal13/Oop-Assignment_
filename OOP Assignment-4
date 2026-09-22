@@ -1,0 +1,57 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Book {
+    string name;
+    string writer;
+    double cost;
+
+public:
+    // Default constructor
+    Book() {
+        name = "Not Available";
+        writer = "Not Available";
+        cost = 0;
+    }
+
+    // Parameterized constructor
+    Book(string n, string w, double c) {
+        name = n;
+        writer = w;
+        cost = c;
+    }
+
+    void show() {
+        cout << "Book Name: " << name << endl;
+        cout << "Writer: " << writer << endl;
+        cout << "Cost: " << cost << endl;
+        cout << endl;
+    }
+};
+
+int main() {
+    Book firstBook;
+
+    Book secondBook("WingsOfFire", "A.P.J.AbdulKalam", 400);
+
+    cout << "--- Default Book ---" << endl;
+    firstBook.show();
+
+    cout << "--- Complete Book ---" << endl;
+    secondBook.show();
+
+    return 0;
+}
+
+Output:
+
+--- Default Book ---
+Book Name: Not Available
+Writer: Not Available
+Cost: 0
+
+--- Complete Book ---
+Book Name: WingsOfFire
+Writer: A.P.J.AbdulKalam
+Cost: 400
