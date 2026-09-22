@@ -1,0 +1,56 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Employee
+{
+    string personName;
+    int code;
+    string section;
+    double income;
+
+public:
+    void enterInfo() {
+        cout << "Enter Employee Name: ";
+        cin >> personName;
+
+        cout << "Enter Employee ID: ";
+        cin >> code;
+
+        cout << "Enter Department: ";
+        cin >> section;
+
+        cout << "Enter Salary: ";
+        cin >> income;
+    }
+
+    void printInfo() {
+        cout << "\n--- Employee Details ---" << endl;
+        cout << "Employee Name: " << personName << endl;
+        cout << "Employee ID: " << code << endl;
+        cout << "Department: " << section << endl;
+        cout << "Salary: " << income << endl;
+    }
+};
+
+int main() {
+    Employee emp;
+
+    emp.enterInfo();
+    emp.printInfo();
+
+    return 0;
+}
+
+Output:
+
+Enter Employee Name: Radha
+Enter Employee ID: 102
+Enter Department: IT
+Enter Salary: 40000
+
+--- Employee Details ---
+Employee Name: Radha
+Employee ID: 102
+Department: IT
+Salary: 40000
