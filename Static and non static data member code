@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+class student
+{
+ int rollNo;
+ string name;
+ static int count;
+
+public:
+    void getdata()
+    {
+        cout << "Enter Roll no:";
+        cin >> rollNo;
+        cout << "Enter Name:";
+        cin >> name;
+        count++;
+    }
+    void display()
+    {
+        cout << "Roll No:" << rollNo << endl;
+        cout << "Name:" << name << endl;
+        cout << "Total Students:" << count <<endl;
+     }
+ };
+ int student::count =0;
+ int main()
+ {   student s1,s2;
+     s1.getData();
+     s2.getData();
+
+     cout << "\nStudent 1:\n";
+     s1.display();
+
+     cout << "\nStudent 2:\n";
+     s2.display();
+
+     return 0;
+ }
+
+Output:
+Enter Roll No:101
+Enter Name:Gauri
+Enter Roll No:102
+Enter Name:Radha
+
+Student 1:
+Roll No:101
+Name:Gauri
+Total Students:2
+
+Student 2:
+Roll No:102
+Name:Radha
+Total Students:2
