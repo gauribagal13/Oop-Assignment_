@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+class student
+{
+   static int count;
+public:
+    static void showCount()
+    {
+      cout << "Name of students:" << count << endl;
+    }
+}
+
+int student::count = 5;
+
+int main()
+{
+   student::showCount();
+   return 0;
+}
+
+Output:
+Number of Students = 5
